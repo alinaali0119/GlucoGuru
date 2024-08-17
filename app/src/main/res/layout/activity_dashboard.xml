@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#D19A72"
+android:alignmentMode="alignMargins"
+android:columnCount="2"
+android:rowCount="3"
+android:padding="16dp">
+
+<Button
+    android:id="@+id/btnProfileManagement"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/button_bg"
+    android:text="Profile Management" />
+
+<Button
+    android:id="@+id/btnHealthDetails"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:background="@drawable/button_border_bg"
+    android:text="Health Details" />
+
+<Button
+    android:id="@+id/btnUploadPhotos"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:background="@drawable/button_border_bg"
+    android:text="Upload Photos" />
+
+<Button
+    android:id="@+id/btnCashbackSection"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/button_bg"
+    android:text="Cashback Section" />
+
+<Button
+    android:id="@+id/btnOptionFive"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/button_bg"
+    android:text="Option Five" />
+
+<Button
+    android:id="@+id/btnOptionSix"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:layout_margin="8dp"
+    android:background="@drawable/button_border_bg"
+    android:text="Option Six" />
+
+</GridLayout>

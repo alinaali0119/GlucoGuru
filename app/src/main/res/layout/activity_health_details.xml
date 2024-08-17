@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:background="#D19A72"
+    tools:context=".HealthDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#132348"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="200dp" />
+
+        <!-- Personal Information -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilFullName"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilAge"
+            app:layout_constraintTop_toBottomOf="@id/tilFullName"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Age"
+                android:inputType="number"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilGender"
+            app:layout_constraintTop_toBottomOf="@id/tilAge"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gender"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Medical History -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medical History"
+            android:id="@+id/tvMedicalHistory"
+            app:layout_constraintTop_toBottomOf="@+id/tilGender"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#132348"
+            android:layout_marginTop="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilMedicalConditions"
+            app:layout_constraintTop_toBottomOf="@+id/tvMedicalHistory"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMedicalConditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medical Conditions"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilMedications"
+            app:layout_constraintTop_toBottomOf="@+id/tilMedicalConditions"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMedications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medications"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Lifestyle Habits -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifestyle Habits"
+            android:id="@+id/tvLifestyleHabits"
+            app:layout_constraintTop_toBottomOf="@+id/tilMedications"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#132348"
+            android:layout_marginTop="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilSmokingStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvLifestyleHabits"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSmokingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Smoking Status"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilAlcoholConsumption"
+            app:layout_constraintTop_toBottomOf="@+id/tilSmokingStatus"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlcoholConsumption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alcohol Consumption"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Biometric Data -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biometric Data"
+            android:id="@+id/tvBiometricData"
+            app:layout_constraintTop_toBottomOf="@+id/tilAlcoholConsumption"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#132348"
+            android:layout_marginTop="24dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilHeight"
+            app:layout_constraintTop_toBottomOf="@+id/tvBiometricData"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Height (cm)"
+                android:inputType="number"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tilWeight"
+            app:layout_constraintTop_toBottomOf="@+id/tilHeight"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Weight (kg)"
+                android:inputType="number"
+                android:textColor="#132348"
+                android:textColorHint="#A1A1A1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            app:layout_constraintTop_toBottomOf="@id/tilWeight"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#132348"
+            android:layout_marginTop="24dp"
+            android:padding="12dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

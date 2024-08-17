@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092579668283",
+    "project_id": "glucoguru",
+    "storage_bucket": "glucoguru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092579668283:android:fafd0421d54ca9b92d871e",
+        "android_client_info": {
+          "package_name": "com.example.glucoguru"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjinbXYouBwm4KmrxS5Ewev6Q8qmuZb6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
