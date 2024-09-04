@@ -2,7 +2,7 @@ package com.example.glucoguru;
 
 public class HealthDetails {
     private String id;
-    private String fullName;
+    private static String fullName;
     private String age;
     private String gender;
     private String medicalConditions;
@@ -11,11 +11,16 @@ public class HealthDetails {
     private String alcoholConsumption;
     private String height;
     private String weight;
+    private String glucose;
+    private String insulin;
+    private String bmi;
+    private String bloodPressure;
+    private String diabetesPedigree;
 
     public HealthDetails() {
     }
 
-    public HealthDetails(String id, String fullName, String age, String gender, String medicalConditions, String medications, String smokingStatus, String alcoholConsumption, String height, String weight) {
+    public HealthDetails(String id, String fullName, String age, String gender, String medicalConditions, String medications, String smokingStatus, String alcoholConsumption, String height, String weight, String glucose, String insulin, String bmi, String bloodPressure, String diabetesPedigree) {
         this.id = id;
         this.fullName = fullName;
         this.age = age;
@@ -26,13 +31,18 @@ public class HealthDetails {
         this.alcoholConsumption = alcoholConsumption;
         this.height = height;
         this.weight = weight;
+        this.glucose = glucose;
+        this.insulin = insulin;
+        this.bmi = bmi;
+        this.bloodPressure = bloodPressure;
+        this.diabetesPedigree = diabetesPedigree;
     }
 
     public String getId() {
         return id;
     }
 
-    public String getFullName() {
+    public static String getFullName() {
         return fullName;
     }
 
@@ -66,5 +76,20 @@ public class HealthDetails {
 
     public String getWeight() {
         return weight;
+}
+    public String getGlucose() {
+        return glucose;
+    }
+    public String getInsulin() {
+        return insulin;
+    }
+    public String getBmi() {
+        return bmi;
+    }
+    public String getBloodPressure() {
+        return bloodPressure;
+    }
+    public String getDiabetesPedigree() {
+        return diabetesPedigree;
     }
 }

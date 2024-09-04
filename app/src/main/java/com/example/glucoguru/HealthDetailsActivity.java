@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,14 +18,14 @@ import com.google.firebase.database.FirebaseDatabase;
 public class HealthDetailsActivity extends AppCompatActivity {
 
     TextInputEditText etFullName, etAge, etGender, etMedicalConditions, etMedications, etSmokingStatus, etAlcoholConsumption, etHeight, etWeight;
-     Button btnSubmit;
+    TextInputEditText etGlucose, etInsulin, etBMI, etBloodPressure, etDiabetesPedigree;
+    Button btnSubmit;
 
-     DatabaseReference databaseReference;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_health_details);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -43,6 +42,11 @@ public class HealthDetailsActivity extends AppCompatActivity {
         etAlcoholConsumption = findViewById(R.id.etAlcoholConsumption);
         etHeight = findViewById(R.id.etHeight);
         etWeight = findViewById(R.id.etWeight);
+        etGlucose = findViewById(R.id.etGlucose);
+        etInsulin = findViewById(R.id.etInsulin);
+        etBMI = findViewById(R.id.etBMI);
+        etBloodPressure = findViewById(R.id.etBloodPressure);
+        etDiabetesPedigree = findViewById(R.id.etDiabetesPedigree);
         btnSubmit = findViewById(R.id.btnSubmit);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("HealthDetails");
@@ -65,6 +69,11 @@ public class HealthDetailsActivity extends AppCompatActivity {
         String alcoholConsumption = etAlcoholConsumption.getText().toString().trim();
         String height = etHeight.getText().toString().trim();
         String weight = etWeight.getText().toString().trim();
+        String glucose = etGlucose.getText().toString().trim();
+        String insulin = etInsulin.getText().toString().trim();
+        String bmi = etBMI.getText().toString().trim();
+        String bloodPressure = etBloodPressure.getText().toString().trim();
+        String diabetesPedigree = etDiabetesPedigree.getText().toString().trim();
 
         if (TextUtils.isEmpty(fullName)) {
             etFullName.setError("Full name is required");
@@ -91,9 +100,29 @@ public class HealthDetailsActivity extends AppCompatActivity {
             return;
         }
 
+        if (TextUtils.isEmpty(glucose)) {
+            etGlucose.setError("Glucose is required");
+            return;
+        }
+
+        if (TextUtils.isEmpty(insulin)) {
+            etInsulin.setError("Insulin is required");
+            return;
+        }
+
+        if (TextUtils.isEmpty(bmi)) {
+            etBMI.setError("BMI is required");
+            return;
+        }
+
+        if (TextUtils.isEmpty(bloodPressure)) {
+            etBloodPressure.setError("Blood Pressure is required");
+            return;
+        }
+
         String id = databaseReference.push().getKey();
 
-        HealthDetails healthDetails = new HealthDetails(id, fullName, age, gender, medicalConditions, medications, smokingStatus, alcoholConsumption, height, weight);
+        HealthDetails healthDetails = new HealthDetails(id, fullName, age, gender, medicalConditions, medications, smokingStatus, alcoholConsumption, height, weight, glucose, insulin, bmi, bloodPressure, diabetesPedigree);
 
         if (id != null) {
             databaseReference.child(id).setValue(healthDetails).addOnCompleteListener(task -> {
@@ -117,6 +146,10 @@ public class HealthDetailsActivity extends AppCompatActivity {
         etAlcoholConsumption.setText("");
         etHeight.setText("");
         etWeight.setText("");
+        etGlucose.setText("");
+        etInsulin.setText("");
+        etBMI.setText("");
+        etBloodPressure.setText("");
+        etDiabetesPedigree.setText("");
     }
-
 }

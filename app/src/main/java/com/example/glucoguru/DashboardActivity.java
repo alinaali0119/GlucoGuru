@@ -47,5 +47,13 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+        btnProfileManagement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(DashboardActivity.this, ProfileActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 }
